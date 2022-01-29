@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- IE Compatible -->
+    <meta name="author" content="COLE SKATE">
+   
+    <!-- First mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Icons fontawesum -->
+    <script src="https://kit.fontawesome.com/db676e76a0.js" crossorigin="anonymous"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add a browser tab icon for a website -->
+    <link rel="icon" href="img/skate_type.png">
+    <!-- Title of Website -->
+    <title>Cole Skate</title>
+    <style>
+        #section-1 {
+            height: auto;
+            background: linear-gradient(to top left, rgba(7, 7, 7, 0.8) 100%, rgba(28, 28, 28, 0.95)100%), url("img/background_image.jpeg") no-repeat;
+            background-position: top;
+            background-size: cover;
+            padding-bottom: 20%;
+        }
+
+        #section-3 {
+            height: auto;
+            
+            padding-bottom: 5%;
+        }
+
+        #section-3 .image-1 {
+            background: url("img/interview_image.jpg") no-repeat;
+            width: 400px;
+            height: 400px;
+            background-position: bottom;
+            background-size: cover;
+            -webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 20%);
+            clip-path: polygon(0% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 20%);
+        }
+
+        #section-3 .image-2 {
+            background: url("img/social_image.jpeg") no-repeat;
+            width: 400px;
+            height: 400px;
+            background-position: bottom;
+            position: relative;
+            background-size: cover;
+            z-index: 2;
+            -webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 20%);
+            -moz-clip-path: polygon(0% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 20%);
+            clip-path: polygon(0% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 20%);
+        }
+
+        #section-3 .shadow {
+            filter: drop-shadow(5px 10px 10px rgb(186, 184, 184));
+        }
+
+        #section-2 .wave {
+            position: absolute;
+            width: 100%;
+            height: 143px;
+            bottom: 0;
+            left: 0;
+            background: url("img/wave-white.png");
+            animation: animate 10s linear infinite;
+            z-index: 1;
+        }
+
+        #section-2 .wave:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 143px;
+            top: 0;
+            left: 0;
+            opacity: .5;
+            background: url("img/wave-white.png");
+            animation: animate-reverse 20s linear infinite;
+        }
+
+        #section-2 .wave:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 143px;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+            background: url("img/wave-white.png");
+            animation: animate 20s linear infinite;
+        }
+
+
+
+
+        #section-4 .wave {
+            position: absolute;
+            width: 100%;
+            height: 143px;
+            bottom: 0px;
+            left: 0;
+            background: url("img/wave-white.png");
+            animation: animate 10s linear infinite;
+            z-index: 1;
+        }
+
+        #section-4 .wave:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 143px;
+            top: 0;
+            left: 0;
+            opacity: 0.4;
+            background: url("img/wave-white.png");
+            animation: animate-reverse 20s linear infinite;
+        }
+
+        #section-4 .wave:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 143px;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+            background: url("img/wave-white.png");
+            animation: animate 20s linear infinite;
+        }
+
+        #section-3 .wave-top {
+            position: absolute;
+            width: 100%;
+            height: 143px;
+            bottom: -134px;
+            left: 0;
+            background: url("img/wave-top.png");
+            animation: animate 10s linear infinite;
+            z-index: 1;
+        }
+
+        #section-3 .wave-top:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 143px;
+            top: 0;
+            left: 0;
+            opacity: 0.4;
+            background: url("img/wave-top.png");
+            animation: animate-reverse 20s linear infinite;
+        }
+
+        #section-3 .wave-top:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 143px;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+            background: url("img/wave-top.png");
+            animation: animate 20s linear infinite;
+        }
+
+        /* animation Website */
+
+        @keyframes animate {
+            0% {
+                background-position: 0;
+            }
+
+            100% {
+                background-position: 1360px;
+            }
+        }
+
+        @keyframes animate-reverse {
+            0% {
+                background-position: 1360px;
+            }
+
+            100% {
+                background-position: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="fixed-top">
+        <!-- Nav-Bar of Website -->
+        <div class="container-fluid">
+
+            <div class="row">
+                <!-- navbar-brand image-->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 d-flex justify-content-start">
+                    <a href="#"><img class="navbar-logo" src="img/cole_type.png" alt=""></a>
+                </div>
+                <!-- navbar-brand side-->
+                <div class="col-lg-9 col-md-6 col-sm-6 col-xs-6 d-flex justify-content-end">
+                    <span class="navbar-side" id="open"><i class="fas fa-bars"></i></span>
+
+                    <div id="mySidenav" class="sidenav">
+                        <img class="logo-nav " src="img/cole_type.png" alt="">
+                        <h1><a href="javascript:void(0)" id="close" class="closebtn"
+                                style="text-decoration: none;">&times;</a>
+                        </h1>
+
+                        <h2><a href="#" style="color: #D1898B; text-decoration: underline; margin-top: 40px;">HOME</a>
+                        </h2>
+                        <h2><a href="#">CLOTHING</a></h2>
+                        <h2><a href="#">SKATEBOARDS</a></h2>
+                        <h2><a href="#">FOOTWEAR</a></h2>
+                        <h2><a href="#">ACCESORIES</a></h2>
+                        <h2><a href="#">BLOG</a></h2>
+
+                        <div class="footer-nav">
+                            <a href="#">[0141] 370 321</a>
+                            <span style="color: #D1898B;">|</span>
+                            <a href="#">EMAIL</a>
+                            <span style="color: #D1898B;">|</span>
+                            <a href="#">INSTA</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="section-1">
+        <div class="container-fluid">
+            <!-- largest image -->
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 ">
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 d-flex justify-content-center">
+                    <img class=" cole-skateboard img-fluid" src="img/cole_skateboard.png" alt="">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 ">
+
+                </div>
+            </div>
+            <!-- logo image -->
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 ">
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 d-flex justify-content-center">
+                    <img class="skate_type" src="img/skate_type.png" alt="">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 ">
+
+                </div>
+            </div>
+            <!-- The main header text -->
+            <div class="row">
+                <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <h2>the home of skateboarding</h2>
+
+                </div>
+                <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+            </div>
+            <!-- Paragraph text -->
+            <div class="row">
+                <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <p>Things change. Boards change, shoes change, tricks change, skaters change.</p>
+                    <div class="outside " style=" z-index: 2;"><button type="button"
+                            class="double">Learn More</button> </div>
+
+                </div>
+                <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+            </div>
+            
+
+        </div>
+
+    </section>
+
+
+    <!-- section - 2 -->
+
+    <section id="section-2">
+        <div class="container-fluid">
+            <!-- Wave image -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="wave img-fluid" style="position: absolute; z-index: 1;">
+
+                    </div>
+                </div>
+
+            </div>
+           
+            <!-- small text -->
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 ">
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 d-flex justify-content-center "
+                    style="position: relative; z-index: 2;">
+                    <h4>Keep it fresh</h4>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 ">
+
+                </div>
+            </div>
+            <!-- main text of the section -2  -->
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-0 col-xs-0 ">
+
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center"
+                    style="position: relative; z-index:2;">
+                    <h2>brand new products</h2>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-0 col-xs-0 ">
+
+                </div>
+            </div>
+            <!-- The products images -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                    <div><img src="img/deck_1.jpg" class="img-fluid" alt="">
+                        <h3>ripndip butterfly deck lavender - 8.25"</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                    <div> <img src="img/hoodie_1.jpg" class="img-fluid" alt="">
+                        <h3>thrasher mag pullover hood - black</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                    <div>
+                        <img src="img/wheels_1.jpg" class="img-fluid" alt="">
+                        <h3> spitfire wheels natural/yellow-55mm</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                    <div>
+                        <img src="img/shoes_1.jpg" class="img-fluid" alt="">
+                        <h3>ds switch skateshoe - white/gum</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- button "learn more " -->
+            <div class="row">
+                <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <div class="outside"><button type="button" class="double">see More</button> </div>
+
+                </div>
+                <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section - 3 -->
+
+    <section id="section-3">
+        <div class="container-fluid">
+            <!-- first one -->
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <div class="wave-top" style="position: absolute; z-index: 1;">
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- first one -->
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <div class="text-section" style="position: relative; z-index: 2;">
+                        <h2>interview with daewon song</h2>
+                        <p>We got to sit down with Daewon at the London premiere for a chat on "what else is out there"
+                        </p>
+                        <a href="#">read more</a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center"
+                    style="position: relative; z-index: 2;">
+                    <div class="shadow">
+                        <div class="image-1"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- seconde one -->
+            <div class="row" style="margin-top:7%;position: relative; z-index: 2;">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center ">
+                    <div class="shadow">
+                        <div class="image-2">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <div class="text-section">
+                        <h2>keep it social</h2>
+                        <p>Follow us on Instegram for the latest tricks from the best skaters around the globe!</p>
+                        <a href="#">follow us</a>
+                    </div>
+
+                </div>
+            </div>
+           
+
+
+        </div>
+    </section>
+
+
+    <!-- section - 4 -->
+
+    <section id="section-4">
+        <div class="container-fluid">
+ <!-- wave image " -->
+ <div class="row" style="position: relative; z-index: 1;">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+         <div class="wave">
+
+         </div>
+     </div>
+
+ </div>
+            <!-- first one -->
+            <div class="row">
+                <div class="col-lg-3 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <div>
+                        <p style="text-transform: uppercase; margin-top: 50px; position: relative; z-index: 2;">
+                            five start reviews</p>
+                        <img src="img/stars_1.png" class="img-fluid" alt="">
+                        <p>Platinum Trusted Service - Feefo 2021</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-0 col-sm-0 col-xs-0 ">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- section - 5 -->
+
+    <section id="section-5">
+        <div class="container-fluid">
+            <!-- first one -->
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <img src="img/cole_skateboard.png" alt="">
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-start">
+                    <div class="newsletter">
+                        <h6>newsletter</h6>
+                        <h3>stay in touch!</h3>
+                        <p>Get the latest deals, news and gear from Cole Skate Co!</p>
+                        <div class="outside"><button type="button" class="double">subscribe</button> </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--End footer-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center">
+                    <div class="footer-footer ">
+                        <a href="#">Delivery</a>
+                        <span style="color: #1C1C1C;">|</span>
+                        <a href="#">terms</a>
+                        <span style="color: #1C1C1C;">|</span>
+                        <a href="#">contact us</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center">
+                    <a href="#"><img src="img/cole_type_reverse.png" alt=""></a>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-center">
+                    <div>
+                        <div class="footer-footer ">
+                            <a href="#">[0141] 370 321</a>
+                            <span style="color: #1C1C1C;">|</span>
+                            <a href="#">EMAIL</a>
+                            <span style="color: #1C1C1C;">|</span>
+                            <a href="#">INSTA</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!--End footer-->
+
+
+
+
+
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- External JS -->
+    <script src="js/javascript.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
